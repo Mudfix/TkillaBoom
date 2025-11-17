@@ -2,27 +2,87 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
-<title>Топ игроков гильдии</title>
+<title>Топ игроков гильдии TkillaBoom</title>
 <style>
-  body { font-family: Arial, sans-serif; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-  th { background-color: #f4f4f4; }
+  /* Общий стиль страницы */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  /* Заголовок */
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Обертка таблицы для центрирования и стилизации */
+  .table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+
+  /* Стили таблицы */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    transition: background 0.3s;
+  }
+
+  th {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Заголовки колонок при наведении */
+  th:hover {
+    background-color: #2980b9;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
 
 <h1>Топ игроков гильдии</h1>
-<table id="guildTable">
-  <thead>
-    <tr>
-      <th>Имя</th>
-      <th>Очки</th>
-      <th>Рейтинг</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div class="table-container">
+  <table id="guildTable">
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Очки</th>
+        <th>Рейтинг</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
 
 <script>
   // URL вашего JSON файла на GitHub
@@ -49,6 +109,4 @@
 </script>
 
 </body>
-
 </html>
-
