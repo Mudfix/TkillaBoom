@@ -4,41 +4,49 @@
 <meta charset="UTF-8" />
 <title>TkillaBoom</title>
 <style>
-  /* Общие стили для таблицы */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+/* Обертка для центрирования */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* высота на весь экран */
+  background-color: #f9f9f9; /* легкий фон для контраста, по желанию */
 }
 
-/* Стиль для заголовков */
+/* Стиль блока таблицы */
+table {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  min-width: 600px; /* минимальная ширина, можно убрать или изменить */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+/* Заголовки */
 thead th {
   padding: 12px 15px;
   text-align: left;
   color: #555;
   border-bottom: 2px solid #eee;
   font-weight: 600;
+  background-color: #fafafa;
 }
 
-/* Стиль для ячеек */
+/* Ячейки */
 tbody td {
   padding: 12px 15px;
   border-bottom: 1px solid #eee;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Минимализм: цвет фона и текста */
-table {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Анимация при наведении — увеличение и легкая тень */
+/* Анимация при наведении — увеличение и тень */
 tbody tr:hover td {
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  z-index: 1; /* чтобы тень не обрезалась */
+  z-index: 1;
   position: relative;
 }
 </style>
@@ -85,6 +93,7 @@ tbody tr:hover td {
 
 </body>
 </html>
+
 
 
 
