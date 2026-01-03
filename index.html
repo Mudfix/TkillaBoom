@@ -4,68 +4,43 @@
 <meta charset="UTF-8" />
 <title>TkillaBoom</title>
 <style>
-  /* Общий стиль страницы */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f4f8;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-  }
+  /* Общие стили для таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
 
-  /* Заголовок */
-  h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-size: 2.5em;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  }
+/* Стиль для заголовков */
+thead th {
+  padding: 12px 15px;
+  text-align: left;
+  color: #555;
+  border-bottom: 2px solid #eee;
+  font-weight: 600;
+}
 
-  /* Обертка таблицы для центрирования и стилизации */
-  .table-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    padding: 20px;
-  }
+/* Стиль для ячеек */
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* Стили таблицы */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1em;
-  }
+/* Минимализм: цвет фона и текста */
+table {
+  background-color: #fff;
+  color: #333;
+}
 
-  th, td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    transition: background 0.3s;
-  }
-
-  th {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-
-  /* Заголовки колонок при наведении */
-  th:hover {
-    background-color: #2980b9;
-    cursor: pointer;
-  }
+/* Анимация при наведении — увеличение и легкая тень */
+tbody tr:hover td {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1; /* чтобы тень не обрезалась */
+  position: relative;
+}
 </style>
 </head>
 <body>
@@ -110,5 +85,6 @@
 
 </body>
 </html>
+
 
 
