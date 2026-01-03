@@ -13,25 +13,25 @@ body {
   color: #ffffff; /* белый цвет текста по умолчанию */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-  
+
 /* Обертка для горизонтального центрирования */
 .table-container {
   display: flex;
   justify-content: center; /* по горизонтали */
-  padding: 20px 0; /* отступ сверху и снизу, можно убрать или изменить */
-  background-color: #f9f9f9; /* по желанию, легкий фон */
+  padding: 20px 0; /* отступ сверху и снизу */
 }
 
-/* Стиль блока таблицы */
+/* Стиль таблицы */
 table {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  min-width: 600px; /* минимальная ширина, можно убрать или изменить */
+  min-width: 600px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   border-collapse: collapse;
+  color: #000; /* черный текст внутри таблицы, чтобы было читаемо на белом фоне */
 }
 
 /* Заголовки */
@@ -58,6 +58,7 @@ tbody tr:hover td {
   z-index: 1;
   position: relative;
 }
+  
 </style>
 </head>
 <body>
@@ -102,6 +103,7 @@ tbody tr:hover td {
 
 </body>
 </html>
+
 
 
 
